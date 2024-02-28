@@ -101,16 +101,11 @@ async def start_command(client: Client, message: Message):
         return
     else:
         reply_markup = InlineKeyboardMarkup(
+            [ 
             [
-                [
-                    InlineKeyboardButton('ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url=f"https://telegram.me/movie7xchat"), 
-                    InlineKeyboardButton('ʟᴜᴄʏ', url=f"https://t.me/Lucy_Filter_bot") 
-                ],[
-                    InlineKeyboardButton('ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ', url=f"https://telegram.me/codeflix_bots")
-                ],[
-                    InlineKeyboardButton("ᴍᴏʀᴇ ɪɴғᴏ ", callback_data = "about"),
-                    InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data = "close")
-                ]
+                InlineKeyboardButton(text="Main Channel", callback_data="help"),
+                InlineKeyboardButton(text="Close", callback_data="close"),
+            ],
             ]
                 )
         await message.reply_text(
