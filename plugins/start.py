@@ -106,8 +106,8 @@ async def start_command(client: Client, message: Message):
         [InlineKeyboardButton("About", callback_data="about"), InlineKeyboardButton("Close", callback_data="close")]
     ]
 )
-await message.reply_text(
-    text=START_MSG.format(
+        await message.reply_text(
+           text=START_MSG.format(
         first=message.from_user.first_name,
         last=message.from_user.last_name,
         username=None if not message.from_user.username else '@' + message.from_user.username,
@@ -117,8 +117,8 @@ await message.reply_text(
     reply_markup=reply_markup,
     disable_web_page_preview=True,
     quote=True
-)
-return
+        )
+        return
 
 
 #=====================================================================================##
