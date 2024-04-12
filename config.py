@@ -42,7 +42,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
 START_MSG = os.environ.get("START_MESSAGE", "<b>Hello {first}</b>\n\n<b>I can store private files in a specific Channel, and other users can access them through a special link.</b>",
-                          )
+)
 try:
     ADMINS=[6376328008]
     for x in (os.environ.get("ADMINS", "6141526656, 1631866308, 1941179517, 1424231015, 5715764478").split()):
@@ -51,7 +51,8 @@ except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "<b>Hello {first}\n\nYou must join my Channel/Group first to view the files I share.\n\nPlease Join the Channel & Group First</b>",
+)
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "")
